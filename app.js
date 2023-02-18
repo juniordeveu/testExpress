@@ -31,6 +31,8 @@ app.get( '/test', ( req, res ) => {
                         + "\n\nUrl " + urlTest.url
                         + "\n\n\nUrlOrg " + urlTest.urlOrg
                         + "\n\n\nUrlPath " + urlTest.urlPath
+                        + "\n\n\nProtocol  " + req.protocol
+                        + "\n\n\nSecurity " + req.secure
                         );
     res.end()
 } )
