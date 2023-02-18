@@ -12,6 +12,11 @@ app.get( '/test', ( req, res ) => {
     const dirName = (__dirname)
     const testIP = req.ip
     const testIPs = req.ips
+    const urlTest = {
+        url :       req.url,
+        urlOrg:     req.originalUrl,
+        urlPath :   req.urlPath
+    }
 
     const cpuInfo = JSON.stringify( os.cpus() )
 
@@ -23,6 +28,9 @@ app.get( '/test', ( req, res ) => {
                         + dirName 
                         + " \n\n\n IPS \n " 
                         + testIPs.length 
+                        + "\n\nUrl " + urlTest.url
+                        + "\n\n\nUrlOrg " + urlTest.urlOrg
+                        + "\n\n\nUrlPath " + urlTest.urlPath
                         );
     res.end()
 } )
