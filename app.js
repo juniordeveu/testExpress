@@ -22,9 +22,8 @@ app.get( '/test', ( req, res ) => {
                         + " \n\n\nDir name "  
                         + dirName 
                         + " \n\n\n IPS \n " 
-                        + testIPs 
+                        + testIPs.length 
                         );
-    
     res.end()
 } )
 
